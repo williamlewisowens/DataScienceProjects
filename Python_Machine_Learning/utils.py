@@ -3,6 +3,10 @@ from matplotlib.colors import ListedColormap
 import matplotlib.pyplot as plt
 
 
+def sigmoid(z):
+    return 1.0 / (1.0 + np.exp(-z))
+
+
 def plot_decision_regions(X,y,classifier,test_idx=None,resolution=0.02):
     # Setup marker generator and color map
     markers = ('s','x','o','^','v',)
